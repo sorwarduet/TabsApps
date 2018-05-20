@@ -1,6 +1,6 @@
 
 import React, { Component } from 'react';
-import { Text } from 'react-native';
+//import { Text } from 'react-native';
 
 import Tabs from './config/Router';
 //import Photos from './screens/Photos';
