@@ -8,6 +8,41 @@ import Photos from '../screens/Photos';
 import Posts from '../screens/Posts';
 
 
+//List print 
+// render() {
+//   console.log(this.state.photos);
+//     return (
+//         <View>
+//           <List>
+//             <FlatList
+//               data={this.state.photos}
+//               keyExtractor={(x, i) => i.toString()}
+//               onEndReached={() => this.handleEnd}
+//               onEndReachedThreshold={0}
+//              ListFooterComponent={() =>
+//               this.state.loading ? null :
+//               <ActivityIndicator size="large" animating />}
+//               renderItem={this.renderPhoto}
+//             />
+//           </List>
+//         </View>
+//     );
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 {

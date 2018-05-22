@@ -24,7 +24,7 @@ class Albums extends Component {
         })
 			.then(response =>
 				this.setState({
-                    albums: response.data,
+              albums: [...this.state.albums, ...response.data]
 				})
 			);
     }

@@ -1,11 +1,8 @@
 
 import React, { Component } from 'react';
-//import { Text } from 'react-native';
 
+//import create own Component
 import Tabs from './config/Router';
-//import Photos from './screens/Photos';
-//import Posts from './screens/Posts';
-
 
 class App extends Component {
 

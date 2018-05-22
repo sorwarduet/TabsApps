@@ -1,16 +1,12 @@
 
-import React, { Component } from 'react'
-import { View, Linking } from 'react-native'
-import { Card, Text, Button } from 'react-native-elements'
-
+import React from 'react';
+import { Card, Text } from 'react-native-elements';
 
 //import create own Component
-
-import CardSection from './common/CardSection'
+import CardSection from './common/CardSection';
 
 const PostDetail = ({ post }) => {
-    const { title,body } = post;
-
+    const { title, body } = post;
     return (
         <Card>
             <CardSection>
@@ -20,9 +16,7 @@ const PostDetail = ({ post }) => {
                 <Text>{body}</Text>
             </CardSection>
        </Card>
-    )
-
-
-}
+    );
+};
 
 export default PostDetail;

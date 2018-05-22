@@ -1,33 +1,31 @@
 
 import React, { Component } from 'react';
-import {View,ScrollView } from 'react-native';
+import { View, ScrollView } from 'react-native';
 
 //import third party library
-import {Card} from 'react-native-elements'
-import axios from 'axios'
+import axios from 'axios';
 
 //import create own Component
-import UserDetail from '../components/UserDetail'
+import UserDetail from '../components/UserDetail';
 
 class Users extends Component {
     state={
-        users:[],
+        users: [],
     };
 
     //Collection of data in API then store local users arry
-    componentWillMount(){
+    componentWillMount() {
         axios.get('https://jsonplaceholder.typicode.com/users')
-        .then(response=>this.setState({
-            users:response.data,
+        .then(response => this.setState({
+            users: response.data,
         }));
     }
 
-    renderUsers(){
-        return this.state.users.map(user=><UserDetail key={user.id} user={user}/>);
+//Create the runder function whcih render the user Detaail passing usr in props
+    renderUsers() {
+        return this.state.users.map(user => <UserDetail key={user.id} user={user} />);
     }
 
-
-   
     render() {
         return (
         <ScrollView>
@@ -35,7 +33,7 @@ class Users extends Component {
                 {this.renderUsers()}
             </View>
         </ScrollView>
-        )
+      );
     }
 }
 

@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
-import { View, ScrollView } from 'react-native';
+import { ScrollView } from 'react-native';
 
 //import third party library
-import { Card } from 'react-native-elements';
 import axios from 'axios';
 
 //import create own Component
@@ -17,12 +16,11 @@ class Posts extends Component {
 
 	//Collection of data in API then store local photos arry
 	componentWillMount() {
-		axios.get('https://jsonplaceholder.typicode.com/posts',{
+		axios.get('https://jsonplaceholder.typicode.com/posts', {
 			params: {
 			userId: this.state.userId,
-		}
-        })
-	
+			}
+    })
 	.then(response =>
 		this.setState({
                 posts: response.data,
@@ -37,7 +35,7 @@ class Posts extends Component {
 	render() {
 		return (
 		<ScrollView>
-                	{this.renderPost()}
+       {this.renderPost()}
 		</ScrollView>
 		);
 	}

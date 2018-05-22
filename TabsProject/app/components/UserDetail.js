@@ -1,31 +1,28 @@
 
-import React, { Component } from 'react'
-import {View,Linking } from 'react-native'
-import {Card,Text} from 'react-native-elements'
-
-
+import React from 'react';
+import { Card, Text } from 'react-native-elements';
+import { View } from 'react-native';
 //import create own Component
+import CardSection from './common/CardSection';
 
-import CardSection from './common/CardSection'
+const UserDetail = ({ user }) => {
+    const { name, email, phone, website } = user;
+    return (
+      <Card>
+       <CardSection>
+         <Text h4>{name}</Text>
+       </CardSection>
 
-const UserDetail=({user})=>{
-    const { name, email, phone, website}=user;
+       <CardSection>
+         <View>
+           <Text >{email}</Text>
+           <Text>{phone}</Text>
+           <Text style={{ fontWeight: 'bold' }}>{website}</Text>
+         </View>
+       </CardSection>
 
-    return <Card>
-			<CardSection>
-				<Text h4>{name}</Text>
-			</CardSection>
-
-			<CardSection>
-				<View>
-                    <Text >{email}</Text>
-					<Text>{phone}</Text>
-					<Text style={{ fontWeight: 'bold' }}>{website}</Text>
-				</View>
-			</CardSection>
-		</Card>;
-
-
-}
+     </Card>
+    );
+};
 
 export default UserDetail;
